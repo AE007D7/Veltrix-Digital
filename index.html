@@ -1374,6 +1374,8 @@ const $=selector=>document.querySelector(selector);
 const $$=selector=>[...document.querySelectorAll(selector)];
 let activeCategory='all',searchTerm='',activeProduct=null,cart=[];
 try{const stored=JSON.parse(localStorage.getItem('veltrix_cart')||'[]');if(Array.isArray(stored)){cart=stored.filter(i=>products.some(p=>p.id===i.id&&productFacts[p.id].resaleMode!=='OFFICIAL_SOURCE_ONLY'&&window.VELTRIX_PRICES?.[i.id]?.variants.some(v=>v.id===String(i.value)))&&Number.isFinite(i.quantity)&&i.quantity>0&&i.quantity<100)}}catch(e){cart=[]}
+// Normalize legacy cart selections from unsupported checkout countries without dropping items.
+cart=cart.map(item=>({...item,region:item.region==='United States'?'United States':'Region to confirm'}));
 const productGrid=$('#productGrid'),cartDrawer=$('#cartDrawer'),productModal=$('#productModal'),overlay=$('#overlay');
 let toastTimer,lastFocused,stripeCheckoutReady=false;
 const STRIPE_CHECKOUT_PRODUCTS=new Set(['playstation','steam','xbox','netflix','amazon','nintendo','itunes']);
@@ -1388,10 +1390,10 @@ function getPriceData(p){return merchantPrices[p.id]||{kind:'merchant',variants:
 function getVariant(p,id){const list=getPriceData(p).variants;return list.find(v=>v.id===String(id))||list[0]||null}
 function displayedFrom(p){const variants=getPriceData(p).variants;return variants.length?Math.min(...variants.map(v=>v.usd)):null}
 function isCheckoutProduct(p){return STRIPE_CHECKOUT_PRODUCTS.has(p.id)&&productFacts[p.id]?.resaleMode==='MERCHANT_SALE'}
-function priceSummary(p){const d=getPriceData(p),v=displayedFrom(p);if(v===null)return 'Unpriced <small>coming soon</small>';const label=d.kind==='provider'?'provider reference · not sold here':isCheckoutProduct(p)?'US checkout · available to buy':'suggested USD price · prelaunch';return `From ${money(v)} <small>${label}</small>`}
+function priceSummary(p){const d=getPriceData(p),v=displayedFrom(p);if(v===null)return 'Unpriced <small>coming soon</small>';const label=d.kind==='provider'?'provider reference · not sold here':stripeCheckoutReady&&isCheckoutProduct(p)?'US checkout · available to buy':'suggested USD price · prelaunch';return `From ${money(v)} <small>${label}</small>`}
 function sourceBadge(p){const f=productFacts[p.id];return f.resaleMode==='OFFICIAL_SOURCE_ONLY'?'Unavailable for checkout':'Region check before order'}
 function renderProducts(){const visible=products.filter(p=>(activeCategory==='all'||p.category===activeCategory)&&(`${p.name} ${p.brand} ${p.type} ${p.description}`.toLowerCase().includes(searchTerm)));
-  productGrid.innerHTML=visible.length?visible.map((p,i)=>`<article class="product-card" style="animation-delay:${Math.min(i,10)*35}ms"><div class="product-art art-${p.art}"><span class="art-badge">${productKind(p)}</span><div class="art-orb"></div>${giftCard(p)}</div><div class="product-content"><div class="product-overline">${escapeHTML(p.type)}</div><div class="product-price-summary">${priceSummary(p)}</div><h3 class="product-title">${escapeHTML(p.name)}</h3><p class="product-subtitle">${escapeHTML(p.description)}</p><div class="product-card-bottom"><span class="product-availability"><span class="tiny-blue"></span> ${sourceBadge(p)}</span><button class="product-view" type="button" data-product="${p.id}" aria-label="${isCheckoutProduct(p)?'Buy':'View options'} ${escapeHTML(p.name)}">${isCheckoutProduct(p)?'Buy ↗':'View options ↗'}</button></div></div></article>`).join(''):'<div class="no-results"><div><strong>No products found</strong>Try another search or choose a different category.</div></div>';
+  productGrid.innerHTML=visible.length?visible.map((p,i)=>`<article class="product-card" style="animation-delay:${Math.min(i,10)*35}ms"><div class="product-art art-${p.art}"><span class="art-badge">${productKind(p)}</span><div class="art-orb"></div>${giftCard(p)}</div><div class="product-content"><div class="product-overline">${escapeHTML(p.type)}</div><div class="product-price-summary">${priceSummary(p)}</div><h3 class="product-title">${escapeHTML(p.name)}</h3><p class="product-subtitle">${escapeHTML(p.description)}</p><div class="product-card-bottom"><span class="product-availability"><span class="tiny-blue"></span> ${sourceBadge(p)}</span><button class="product-view" type="button" data-product="${p.id}" aria-label="${stripeCheckoutReady&&isCheckoutProduct(p)?'Buy':'View options'} ${escapeHTML(p.name)}">${stripeCheckoutReady&&isCheckoutProduct(p)?'Buy ↗':'View options ↗'}</button></div></div></article>`).join(''):'<div class="no-results"><div><strong>No products found</strong>Try another search or choose a different category.</div></div>';
   $('#resultsCount').textContent=String(visible.length);}
 function applyCategory(category,scroll=false){activeCategory=category;$$('.category-tab').forEach(btn=>{let isActive=btn.dataset.category===category;btn.classList.toggle('active',isActive);btn.setAttribute('aria-pressed',String(isActive))});renderProducts();if(scroll)$('#catalog').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})}
 $('#categoryTabs').addEventListener('click',e=>{const btn=e.target.closest('[data-category]');if(btn)applyCategory(btn.dataset.category)});
@@ -1426,7 +1428,7 @@ function setPriceAndRegion(){
 }
 function openProduct(id){
  const p=products.find(p=>p.id===id);if(!p)return;
- activeProduct=p;$('#modalTitle').textContent=p.name;$('#modalDescription').textContent=p.details;$('#modalAdd').innerHTML=isCheckoutProduct(p)?'Add to cart <span class="btn-arrow" aria-hidden="true">↗</span>':'Add to request <span class="btn-arrow" aria-hidden="true">↗</span>';
+ activeProduct=p;$('#modalTitle').textContent=p.name;$('#modalDescription').textContent=p.details;$('#modalAdd').innerHTML=stripeCheckoutReady&&isCheckoutProduct(p)?'Add to cart <span class="btn-arrow" aria-hidden="true">↗</span>':'Add to request <span class="btn-arrow" aria-hidden="true">↗</span>';
  $('#modalVisual').className=`modal-visual art-${p.art}`;$('#modalVisual').innerHTML=giftCard(p);
  $('#optionLabel').textContent='CHOOSE VALUE / PLAN · USD';
  $('#region').value='United States';setPriceAndRegion();openLayer(productModal);
