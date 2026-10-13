@@ -4,5 +4,5 @@ window.VELTRIX_STORE = {
   supportEmail: '',          // e.g. your verified business support inbox
   whatsappNumber: '',        // digits in international format, only if you operate this number
   businessName: 'Veltrix Digital',
-  domain: ''                  // verified HTTPS domain after deployment
+  domain: 'https://veltrixdigi.com'                  // verified HTTPS domain after deployment
 };
