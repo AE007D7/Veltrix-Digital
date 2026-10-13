@@ -10,7 +10,7 @@ const ALLOWED_ORIGINS = new Set([
 function liveCheckoutEnabled() {
   return process.env.STRIPE_LIVE_CHECKOUT === 'true'
     && typeof process.env.STRIPE_SECRET_KEY === 'string'
-    && process.env.STRIPE_SECRET_KEY.startsWith('sk_live_');
+    && (/^sk_live_[A-Za-z0-9]+$/.test(process.env.STRIPE_SECRET_KEY) || /^rk_live_[A-Za-z0-9]+$/.test(process.env.STRIPE_SECRET_KEY));
 }
 
 function json(res, status, body) {
