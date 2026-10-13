@@ -1597,9 +1597,9 @@ $('#copyOrder').addEventListener('click',()=>{if(!cart.length)return;closeLayers
 $('#checkoutButton').addEventListener('click',async()=>{if(!cart.length)return;const button=$('#checkoutButton');button.disabled=true;try{const response=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:cart.map(({id,value,region,quantity})=>({id,value,region,quantity}))})});const result=await response.json();if(!response.ok||!result.url)throw new Error(result.error||'Secure checkout is unavailable. You can still send an enquiry.');window.location.assign(result.url)}catch(error){showToast(error.message||'Unable to open checkout.')}finally{button.disabled=false}});
 fetch('/api/checkout',{cache:'no-store'}).then(response=>{if(!response.ok)throw Error('Checkout unavailable');return response.json()}).then(result=>{
  stripeCheckoutReady=result.checkoutEnabled===true;cart=stripeCheckoutReady?pendingCheckoutCart:[];
- renderProducts();updateCart();if(activeProduct)setPriceAndRegion();
+ renderProducts();updateCart();refreshDiscoveryOfferLabels();if(activeProduct)setPriceAndRegion();
  if(removedLegacySelections)showToast('Unavailable products were cleared from your payment cart.');
-}).catch(()=>{stripeCheckoutReady=false;cart=[];renderProducts();updateCart();if(activeProduct)setPriceAndRegion()});
+}).catch(()=>{stripeCheckoutReady=false;cart=[];renderProducts();updateCart();refreshDiscoveryOfferLabels();if(activeProduct)setPriceAndRegion()});
 const checkoutParams=new URLSearchParams(window.location.search);if(checkoutParams.get('checkout')==='cancelled')showToast('Checkout was cancelled. Your selection is still available.');if(checkoutParams.get('session_id'))fetch('/api/checkout?session_id='+encodeURIComponent(checkoutParams.get('session_id'))).then(r=>r.json()).then(result=>{if(result.paymentStatus==='paid'){cart=[];saveCart();showToast('Payment received. Thank you.')}}).catch(()=>{});
 $('#copyRequest').addEventListener('click',copyOrderText);
 $('#orderRequestForm').addEventListener('submit',async(e)=>{e.preventDefault();if(!cart.length){showToast('Choose an item first');return}const form=e.currentTarget;const b=$('#submitRequest');const state=$('#requestStatus');const values=Object.fromEntries(new FormData(form));const payload={name:values.name,email:values.email,country:values.country,message:values.message,website:values.website,items:cart.map(i=>({id:i.id,value:i.value,region:i.region,quantity:i.quantity}))};b.disabled=true;state.textContent='Sending your request…';try{const r=await fetch('/api/request',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const data=await r.json();if(!r.ok)throw new Error(data.error||'Unable to send at the moment.');state.textContent='Request received. We will reply using the email you provided.';cart=[];saveCart();form.reset();}catch(err){state.textContent=`${err.message} You can copy your request below and contact our support team.`;}finally{b.disabled=false}});
@@ -1652,6 +1652,24 @@ if(window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-mo
 }
 
 
+// Keep prices and buy labels consistent across category rails, lists, and hero spotlights.
+function refreshDiscoveryOfferLabels(){
+ document.querySelectorAll('[data-discovery-product]').forEach(button=>{
+   const p=products.find(x=>x.id===button.dataset.discoveryProduct);
+   if(!p)return;
+   const price=button.querySelector('.discovery-card-price');
+   if(price)price.innerHTML=priceSummary(p);
+   const hotPrice=button.querySelector('.hot-list-price');
+   if(hotPrice)hotPrice.textContent=stripeCheckoutReady&&isCheckoutProduct(p)&&displayedFrom(p)!==null?money(displayedFrom(p)):'Enquiry only';
+   const link=button.querySelector('.discovery-card-link');
+   if(link)link.innerHTML=(stripeCheckoutReady&&isCheckoutProduct(p)?'Buy':'View details')+' <b aria-hidden="true">↗</b>';
+ });
+ document.querySelectorAll('[data-feature-product]').forEach(button=>{
+   const p=products.find(x=>x.id===button.dataset.featureProduct);
+   const label=button.querySelector('.sub-feature-meta small');
+   if(p&&label)label.textContent=stripeCheckoutReady&&isCheckoutProduct(p)&&displayedFrom(p)!==null?'From '+money(displayedFrom(p))+' · US gift card':'Availability enquiry only';
+ });
+}
 // Home discovery rails and featured categories. Every card links into the existing enquiry flow.
 function miniCard(id,i,variant=''){const p=products.find(x=>x.id===id);if(!p)return '';return `<button class="discovery-card discovery-card--${p.art} ${variant}" type="button" data-discovery-product="${id}" style="--stagger:${i}"><span class="discovery-art art-${p.art}">${brandMark(p)}</span><span class="discovery-card-type">${productKind(p)}</span><strong>${escapeHTML(p.name)}</strong><span class="discovery-card-price">${priceSummary(p)}</span><span class="discovery-card-link">${stripeCheckoutReady&&isCheckoutProduct(p)?'Buy':'View details'} <b>↗</b></span></button>`}
 const discoverLists={
