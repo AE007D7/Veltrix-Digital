@@ -504,3 +504,27 @@ body, .container, .drawer, .request-dialog, .product-modal{overflow-wrap:break-w
  .rail-see-all{padding:8px 10px;font-size:10px}
  .discovery-card,.discovery-rail--topups .discovery-card-featured{flex-basis:min(100%,330px)!important;width:min(100%,330px)}
 }
+
+
+/* Purchase cards: allow content to size the card, keep the action in view. */
+.discovery-rail{align-items:stretch}
+.discovery-card,.discovery-rail--topups .discovery-card-featured{height:auto!important;min-height:390px;max-height:none;flex-shrink:0;padding-bottom:0;display:flex;flex-direction:column}
+.discovery-card .discovery-art,.discovery-card-featured .discovery-art{flex:0 0 180px!important;height:180px!important}
+.discovery-card-type{flex:none;margin:18px 18px 10px;line-height:1.4}
+.discovery-card>strong{flex:none;white-space:normal;overflow:visible;text-overflow:clip;margin:0 18px 12px;line-height:1.35;min-height:22px;font-size:17px}
+.discovery-card-price{flex:none;padding:0 18px!important;margin:0 0 18px!important;font-size:17px;line-height:1.4}
+.discovery-card-price small{font-size:12px;line-height:1.5;display:block;overflow-wrap:anywhere}
+.discovery-card-link{flex:none;position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:46px;padding:12px 16px;margin:auto 18px 18px!important;border:1px solid #74cdff;background:linear-gradient(120deg,#67d3ff,#3096fa);border-radius:12px;color:#04172d;font:800 14px/1.25 var(--body);box-shadow:0 5px 16px #178aff26}
+.discovery-card-link b{color:inherit;font-size:20px;margin:0}
+.discovery-card:hover .discovery-card-link{background:#a1e5ff;box-shadow:0 7px 24px #319dff40}
+.discovery-card:focus-visible,.product-view:focus-visible{outline:3px solid #a7e7ff;outline-offset:4px}
+.product-card-bottom{flex-wrap:wrap;gap:14px}
+.product-view{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:12px 20px;border-radius:12px;border:1px solid #72c9ff;background:linear-gradient(120deg,#65cfff,#3097fa);color:#04172d;font-weight:800;white-space:nowrap}
+.product-view:hover{background:#a1e5ff;color:#04172d}
+#modalAdd,#checkoutButton{min-height:50px;border-radius:12px;font-weight:800}
+.art-battlenet{background:linear-gradient(145deg,#006ad0,#073467)}
+.art-twitch{background:linear-gradient(145deg,#8d4df3,#351568)}
+.art-discord{background:linear-gradient(145deg,#6573ed,#242d75)}
+.gift-card--battlenet,.gift-card--twitch,.gift-card--discord{background:linear-gradient(145deg,#264c93,#10203e)}
+@media(max-width:600px){.discovery-card,.discovery-rail--topups .discovery-card-featured{flex-basis:min(78vw,290px)!important;width:min(78vw,290px)!important;min-height:380px}.discovery-card .discovery-art{height:170px!important;flex-basis:170px!important}.discovery-card-link{min-height:48px}.product-view{width:100%;min-height:48px}}
+@media(prefers-reduced-motion:reduce){.discovery-card,.discovery-card-link,.product-view{transition:none!important}}

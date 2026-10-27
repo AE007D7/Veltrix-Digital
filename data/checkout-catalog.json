@@ -1,0 +1,569 @@
+{
+  "playstation": {
+    "name": "PlayStation Store",
+    "variants": {
+      "10": {
+        "label": "$10 USD face value · US card",
+        "amount": 1149,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "25": {
+        "label": "$25 USD face value · US card",
+        "amount": 2749,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "50": {
+        "label": "$50 USD face value · US card",
+        "amount": 5399,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "100": {
+        "label": "$100 USD face value · US card",
+        "amount": 10699,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      }
+    }
+  },
+  "steam": {
+    "name": "Steam Wallet",
+    "variants": {
+      "10": {
+        "label": "$10 USD face value · US card",
+        "amount": 1149,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "20": {
+        "label": "$20 USD face value · US card",
+        "amount": 2249,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "50": {
+        "label": "$50 USD face value · US card",
+        "amount": 5399,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "100": {
+        "label": "$100 USD face value · US card",
+        "amount": 10699,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      }
+    }
+  },
+  "xbox": {
+    "name": "Xbox Gift Card",
+    "variants": {
+      "10": {
+        "label": "$10 USD face value · US card",
+        "amount": 1149,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "25": {
+        "label": "$25 USD face value · US card",
+        "amount": 2749,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "50": {
+        "label": "$50 USD face value · US card",
+        "amount": 5399,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "100": {
+        "label": "$100 USD face value · US card",
+        "amount": 10699,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      }
+    }
+  },
+  "netflix": {
+    "name": "Netflix Gift Card",
+    "variants": {
+      "15": {
+        "label": "$15 USD face value · US card",
+        "amount": 1699,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "25": {
+        "label": "$25 USD face value · US card",
+        "amount": 2749,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "50": {
+        "label": "$50 USD face value · US card",
+        "amount": 5399,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "100": {
+        "label": "$100 USD face value · US card",
+        "amount": 10699,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      }
+    }
+  },
+  "google": {
+    "name": "Google Play Gift Card",
+    "variants": {
+      "eur15at": {
+        "label": "€15 Google Play gift card · Austria · code",
+        "amount": 2100,
+        "region": "Austria",
+        "note": "€15 Google Play code for Austria-region accounts. Your physical country, Google Play country, and payment profile must meet Google's redemption requirements. Not a US Google Play card."
+      }
+    }
+  },
+  "amazon": {
+    "name": "Amazon Gift Card",
+    "variants": {
+      "10": {
+        "label": "$10 USD face value · US card",
+        "amount": 1149,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "25": {
+        "label": "$25 USD face value · US card",
+        "amount": 2749,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "50": {
+        "label": "$50 USD face value · US card",
+        "amount": 5399,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "100": {
+        "label": "$100 USD face value · US card",
+        "amount": 10699,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      }
+    }
+  },
+  "roblox": {
+    "name": "Roblox Gift Card",
+    "variants": {
+      "usd10": {
+        "label": "$10 Roblox credit · digital code",
+        "amount": 1200,
+        "region": "United States",
+        "note": "Official Roblox key; redeem credit to purchase Robux. The Robux amount depends on Roblox's current conversion."
+      }
+    }
+  },
+  "nintendo": {
+    "name": "Nintendo eShop",
+    "variants": {
+      "10": {
+        "label": "$10 USD face value · US card",
+        "amount": 1149,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "20": {
+        "label": "$20 USD face value · US card",
+        "amount": 2249,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "35": {
+        "label": "$35 USD face value · US card",
+        "amount": 3849,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "50": {
+        "label": "$50 USD face value · US card",
+        "amount": 5399,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      }
+    }
+  },
+  "spotify": {
+    "name": "Spotify Premium",
+    "variants": {
+      "individual_1": {
+        "label": "Individual · 1 month",
+        "amount": 285,
+        "region": "Nigeria / Egypt",
+        "note": "Check your account region before purchase."
+      },
+      "individual_3": {
+        "label": "Individual · 3 months",
+        "amount": 900,
+        "region": "Egypt",
+        "note": "Check your account region before purchase."
+      },
+      "individual_6": {
+        "label": "Individual · 6 months",
+        "amount": 1700,
+        "region": "Egypt",
+        "note": "Check your account region before purchase."
+      },
+      "individual_12": {
+        "label": "Individual · 12 months",
+        "amount": 3000,
+        "region": "Egypt",
+        "note": "Check your account region before purchase."
+      },
+      "standard_12": {
+        "label": "Standard · 12 months · promotional price",
+        "amount": 2500,
+        "region": "India",
+        "note": "Check your account region before purchase."
+      },
+      "duo_1": {
+        "label": "Duo · 1 month",
+        "amount": 409,
+        "region": "Nigeria / Egypt",
+        "note": "Check your account region before purchase."
+      },
+      "duo_3": {
+        "label": "Duo · 3 months",
+        "amount": 1200,
+        "region": "Egypt",
+        "note": "Check your account region before purchase."
+      },
+      "duo_6": {
+        "label": "Duo · 6 months",
+        "amount": 2400,
+        "region": "Egypt",
+        "note": "Check your account region before purchase."
+      },
+      "duo_12": {
+        "label": "Duo · 12 months",
+        "amount": 4200,
+        "region": "Egypt",
+        "note": "Check your account region before purchase."
+      },
+      "family_1": {
+        "label": "Family owner · 1 month · up to 5 additional members",
+        "amount": 500,
+        "region": "Nigeria / Egypt",
+        "note": "Check your account region before purchase."
+      },
+      "family_3": {
+        "label": "Family owner · 3 months · up to 5 additional members",
+        "amount": 1500,
+        "region": "Egypt",
+        "note": "Check your account region before purchase."
+      },
+      "platinum_1": {
+        "label": "Platinum · 1 month",
+        "amount": 600,
+        "region": "India",
+        "note": "Check your account region before purchase."
+      },
+      "platinum_2_5": {
+        "label": "Platinum · 2.5 months",
+        "amount": 2800,
+        "region": "India",
+        "note": "Check your account region before purchase."
+      },
+      "poland_1": {
+        "label": "Individual Poland · 1 month",
+        "amount": 1100,
+        "region": "Poland",
+        "note": "Check your account region before purchase."
+      }
+    }
+  },
+  "gemini": {
+    "name": "Google Gemini Subscription",
+    "variants": {
+      "pro12": {
+        "label": "Google AI Pro · 12 months · own-account activation",
+        "amount": 1200,
+        "region": "Eligible Google account regions",
+        "note": "A 12-month Google AI Pro own-account activation option. Features and eligibility depend on your Google account and country. No Google password is collected by Veltrix checkout."
+      }
+    }
+  },
+  "robux": {
+    "name": "Roblox Robux Top-Up",
+    "variants": {
+      "usd10": {
+        "label": "$10 Roblox credit for Robux · digital code",
+        "amount": 1200,
+        "region": "United States",
+        "note": "Redeem this $10 gift card on Roblox, then use the credit to purchase Robux. A fixed Robux quantity is not included."
+      }
+    }
+  },
+  "valorant-points": {
+    "name": "VALORANT Points",
+    "variants": {
+      "eur25": {
+        "label": "€25 VALORANT credit · Europe · code",
+        "amount": 2700,
+        "region": "Europe",
+        "note": "Prepaid VALORANT code for European Riot accounts. The card value is EUR; checkout is charged in USD."
+      }
+    }
+  },
+  "lol-riot": {
+    "name": "League of Legends RP",
+    "variants": {
+      "eur25": {
+        "label": "€25 League of Legends credit · Europe",
+        "amount": 3200,
+        "region": "Europe",
+        "note": "European League of Legends prepaid code. The source lists 2,575 RP; Riot determines the final entitlement during redemption."
+      }
+    }
+  },
+  "wow-time": {
+    "name": "World of Warcraft Game Time",
+    "variants": {
+      "us60": {
+        "label": "60-day game-time code · US WoW account",
+        "amount": 3000,
+        "region": "United States",
+        "note": "A 60-day World of Warcraft time card for US WoW accounts. Redeem the code yourself on Battle.net; no account password is needed."
+      }
+    }
+  },
+  "wow-mists": {
+    "name": "WoW: Mists of Pandaria Classic",
+    "variants": {
+      "us60": {
+        "label": "60-day WoW game-time code · US account",
+        "amount": 3000,
+        "region": "United States",
+        "note": "WoW game time for an eligible US account, including access to supported Classic realms. This is game time, not an expansion or a character service."
+      }
+    }
+  },
+  "wow-classic": {
+    "name": "WoW Classic Era",
+    "variants": {
+      "us60": {
+        "label": "60-day WoW game-time code · US account",
+        "amount": 3000,
+        "region": "United States",
+        "note": "World of Warcraft game time for an eligible US account. Access to supported Classic Era realms depends on Blizzard's current account requirements."
+      }
+    }
+  },
+  "fortnite-items": {
+    "name": "Fortnite Items & Packs",
+    "variants": {
+      "britecanada": {
+        "label": "Operation Brite Starter Pack · Xbox code",
+        "amount": 1000,
+        "region": "Canada",
+        "note": "Operation Brite Starter Pack digital code. Requires the free Fortnite game and a Canadian Xbox account linked to your Epic Games account."
+      }
+    }
+  },
+  "xbox-essential": {
+    "name": "Xbox Game Pass Essential",
+    "variants": {
+      "india1": {
+        "label": "Game Pass Essential · 1 month · India code",
+        "amount": 600,
+        "region": "India",
+        "note": "One-month Xbox Game Pass Essential activation code for India-region Microsoft accounts. Check existing subscription and regional eligibility before purchase."
+      }
+    }
+  },
+  "xbox-live": {
+    "name": "Xbox Live / Online Gaming",
+    "variants": {
+      "india1": {
+        "label": "Online play via Game Pass Essential · 1 month",
+        "amount": 600,
+        "region": "India",
+        "note": "Xbox online multiplayer through a one-month Game Pass Essential code for an eligible India-region Microsoft account. This is Essential, not a legacy Xbox Live Gold code."
+      }
+    }
+  },
+  "cod-mw3": {
+    "name": "Call of Duty: Modern Warfare III",
+    "variants": {
+      "xboxglobal": {
+        "label": "Cross-Gen Bundle · Xbox One / Series X|S",
+        "amount": 7800,
+        "region": "Global — supported Xbox regions",
+        "note": "Modern Warfare III (2023) Cross-Gen Bundle digital key for Xbox One and Xbox Series X|S. This is not the 2011 Modern Warfare 3 game."
+      }
+    }
+  },
+  "cod-bo6": {
+    "name": "Call of Duty: Black Ops 6",
+    "variants": {
+      "xboxglobal": {
+        "label": "Cross-Gen Bundle · Xbox One / Series X|S",
+        "amount": 8900,
+        "region": "Global — supported Xbox regions",
+        "note": "Xbox digital game key for the Black Ops 6 Cross-Gen Bundle. Not a Steam, PlayStation, or Battle.net key. Check Microsoft account eligibility before ordering."
+      }
+    }
+  },
+  "cod-bo7": {
+    "name": "Call of Duty: Black Ops 7",
+    "variants": {
+      "xboxglobal": {
+        "label": "Cross-Gen edition · Xbox digital key",
+        "amount": 8100,
+        "region": "Global — supported Xbox regions",
+        "note": "Xbox activation code for Black Ops 7 Cross-Gen. This option is for Xbox; a different platform requires a different product."
+      }
+    }
+  },
+  "diablo4": {
+    "name": "Diablo IV",
+    "variants": {
+      "xboxglobal": {
+        "label": "Base game · Xbox One / Series X|S · key",
+        "amount": 8100,
+        "region": "Global — supported Xbox regions",
+        "note": "Diablo IV base-game activation code for Xbox. Expansions, Platinum, and online multiplayer subscriptions are not included."
+      }
+    }
+  },
+  "cs2": {
+    "name": "Counter-Strike 2",
+    "variants": {
+      "primecis": {
+        "label": "Prime Status Upgrade · Steam gift",
+        "amount": 4100,
+        "region": "Armenia, Azerbaijan, Belarus, Georgia, Kyrgyzstan, Kazakhstan, Moldova, Tajikistan, Turkmenistan, Uzbekistan, Russia, Ukraine",
+        "note": "Counter-Strike 2 is free to play. This purchase is Prime Status Upgrade, delivered as a Steam gift for the listed countries only."
+      }
+    }
+  },
+  "madden26": {
+    "name": "Madden NFL 26",
+    "variants": {
+      "standardxbox": {
+        "label": "Standard Edition · Xbox Series X|S · key",
+        "amount": 1900,
+        "region": "Global — supported Xbox regions",
+        "note": "Madden NFL 26 Standard Edition digital code for Xbox Series X|S. Not compatible with Xbox One, PlayStation, or Steam."
+      }
+    }
+  },
+  "fortnite-game": {
+    "name": "Fortnite",
+    "variants": {
+      "britecanada": {
+        "label": "Operation Brite Starter Pack · Xbox code",
+        "amount": 1000,
+        "region": "Canada",
+        "note": "Fortnite itself is free to play. This purchase is the Operation Brite Starter Pack add-on, redeemed on a Canadian Xbox account linked to Epic Games."
+      }
+    }
+  },
+  "valorant-card": {
+    "name": "VALORANT Gift Card",
+    "variants": {
+      "eur25": {
+        "label": "€25 VALORANT gift card · Europe",
+        "amount": 2700,
+        "region": "Europe",
+        "note": "Redeem a €25 prepaid code on a compatible European VALORANT account. USD is the selling currency, not the card face value."
+      }
+    }
+  },
+  "fortnite-card": {
+    "name": "Fortnite Gift Card",
+    "variants": {
+      "eur10fr": {
+        "label": "€10 Fortnite gift card · France · code",
+        "amount": 1400,
+        "region": "France",
+        "note": "€10 Fortnite gift card for a France-region Epic Games account. Card credit is EUR; you pay the listed USD selling price."
+      }
+    }
+  },
+  "lol-card": {
+    "name": "League of Legends Gift Card",
+    "variants": {
+      "eur25": {
+        "label": "€25 League of Legends gift card · Europe",
+        "amount": 3200,
+        "region": "Europe",
+        "note": "Digital League of Legends code for European accounts. Card value is €25; payment is charged in USD."
+      }
+    }
+  },
+  "itunes": {
+    "name": "Apple Gift Card / iTunes",
+    "variants": {
+      "10": {
+        "label": "$10 USD face value · US card",
+        "amount": 1149,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "25": {
+        "label": "$25 USD face value · US card",
+        "amount": 2749,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "50": {
+        "label": "$50 USD face value · US card",
+        "amount": 5399,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      },
+      "100": {
+        "label": "$100 USD face value · US card",
+        "amount": 10699,
+        "region": "United States",
+        "note": "Check your account region before purchase."
+      }
+    }
+  },
+  "battle-net": {
+    "name": "Battle.net Gift Card",
+    "variants": {
+      "usd20": {
+        "label": "$20 Battle.net balance · digital code",
+        "amount": 2400,
+        "region": "North America",
+        "note": "$20 Battle.net balance code for North American accounts. Your Battle.net country and balance currency must support this USD code."
+      }
+    }
+  },
+  "twitch": {
+    "name": "Twitch Gift Card",
+    "variants": {
+      "usd50": {
+        "label": "$50 Twitch balance · digital code",
+        "amount": 6300,
+        "region": "United States",
+        "note": "$50 Twitch gift card for eligible US accounts. Redeem the code in your Twitch wallet for supported subscriptions, gifts, or Bits."
+      }
+    }
+  },
+  "discord-nitro": {
+    "name": "Discord Nitro Gift",
+    "variants": {
+      "month1": {
+        "label": "Discord Nitro · 1 month · gift link",
+        "amount": 1600,
+        "region": "Eligible Discord account regions",
+        "note": "One-month Discord Nitro gift link for an eligible account. This is Nitro, not Nitro Basic. No login or password is requested. One-time payment; no automatic renewal."
+      }
+    }
+  }
+}
