@@ -64,7 +64,7 @@ module.exports = async function handler(req, res) {
 
   if (req.method === 'GET') {
     const sessionId = typeof req.query?.session_id === 'string' ? req.query.session_id : '';
-    if (!sessionId) { const enabled = liveCheckoutEnabled(); return json(res, 200, { checkoutEnabled: enabled, paymentMethods: enabled ? await publicPaymentMethods() : [] }); }
+    if (!sessionId) { const enabled = liveCheckoutEnabled(); if (req.query?.payment_methods === '1') return json(res, 200, { checkoutEnabled: enabled, paymentMethods: enabled ? await publicPaymentMethods() : [] }); return json(res, 200, { checkoutEnabled: enabled }); }
     if (!/^cs_(test|live)_[A-Za-z0-9]+$/.test(sessionId) || !liveCheckoutEnabled()) {
       return json(res, 400, { paymentStatus: 'unknown' });
     }

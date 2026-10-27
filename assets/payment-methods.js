@@ -26,5 +26,5 @@ function render(){
  const title=document.getElementById('veltrixPayTitle'),text=document.getElementById('veltrixPayText');if(methods.length){if(title)title.textContent=c.title;if(text)text.textContent=c.text;}
 }
 new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
-fetch('/api/checkout',{headers:{Accept:'application/json'}}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(data=>{methods=data.checkoutEnabled===true&&Array.isArray(data.paymentMethods)?data.paymentMethods.filter(m=>typeof m==='string'&&/^[a-z][a-z0-9_]{1,50}$/.test(m)):[];render()}).catch(()=>{methods=[];render()});
+fetch('/api/checkout?payment_methods=1',{headers:{Accept:'application/json'}}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(data=>{methods=data.checkoutEnabled===true&&Array.isArray(data.paymentMethods)?data.paymentMethods.filter(m=>typeof m==='string'&&/^[a-z][a-z0-9_]{1,50}$/.test(m)):[];render()}).catch(()=>{methods=[];render()});
 })();
