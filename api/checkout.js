@@ -32,7 +32,14 @@ async function stripeRequest(path, options = {}) {
   return { response, data };
 }
 
+// Card, Apple Pay and Link were verified on the live hosted checkout.
+// Wallets remain conditional on the buyer's country, browser and device.
+const VERIFIED_METHODS = ['card', 'apple_pay', 'link'];
 let methodCache = null;
+function verifiedMethodFallback() {
+  methodCache = { methods: VERIFIED_METHODS, expires: Date.now() + 60000 };
+  return VERIFIED_METHODS;
+}
 let methodRequest = null;
 async function publicPaymentMethods() {
   if (methodCache && methodCache.expires > Date.now()) return methodCache.methods;
@@ -41,12 +48,12 @@ async function publicPaymentMethods() {
     try {
       const { response, data } = await stripeRequest('/payment_method_configurations?limit=100', { signal: AbortSignal.timeout(4000) });
       const config = Array.isArray(data.data) ? data.data.find(c => c.active === true && c.is_default === true && c.livemode === true) : null;
-      if (!response.ok || !config) return ['card'];
+      if (!response.ok || !config) return verifiedMethodFallback();
       const methods = Object.entries(config).filter(([key, value]) => /^[a-z][a-z0-9_]{1,50}$/.test(key)
         && value && typeof value === 'object' && value.available === true && value.display_preference?.value === 'on').map(([key]) => key);
       methodCache = { methods, expires: Date.now() + 300000 };
       return methods;
-    } catch (_) { return ['card']; }
+    } catch (_) { return verifiedMethodFallback(); }
     finally { methodRequest = null; }
   })();
   return methodRequest;
