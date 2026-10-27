@@ -1,0 +1,54 @@
+# Veltrix Digital
+
+> Independent retailer of digital gift cards, game codes, gaming credit and selected subscription plans. Prices are in USD. Pay Veltrix Digital through Stripe Checkout.
+
+## Store and product information
+- [Product directory](https://veltrixdigi.com/products/): Current priced products with activation regions and links to checkout.
+- [Gift cards](https://veltrixdigi.com/gift-cards.html): Gaming and entertainment gift cards, including EA Wallet, Steam, PlayStation, Xbox, Roblox, Battle.net, Twitch and Discord Nitro.
+- [Subscription plans](https://veltrixdigi.com/subscriptions.html): Plan durations, one-time prices and regional requirements.
+
+## Ordering facts
+- A card's face value is the credit redeemed. The selling price is the USD amount charged by Veltrix.
+- Products may be restricted to a country, account currency or platform. Use the selected variant's regional requirements, not the site's checkout currency, to determine compatibility.
+- Payments are one-time purchases. Delivery is processed after payment confirmation; instant fulfilment is not guaranteed.
+- Payment methods depend on country, device, currency and order eligibility. Stripe shows the actual options at checkout.
+- Veltrix is independent of the product brands. Checkout does not collect service passwords or verification codes.
+- Product pages are the source for current prices and variants. Do not infer additional denominations or regions.
+
+## Priced product pages
+- [PlayStation Store](https://veltrixdigi.com/gift-cards/playstation/): Discover games, add-ons and more for your PlayStation account.
+- [Steam Wallet](https://veltrixdigi.com/gift-cards/steam/): Top up your Steam Wallet for games and digital extras.
+- [Xbox Gift Card](https://veltrixdigi.com/gift-cards/xbox/): Discover new games and content across the Xbox ecosystem.
+- [Netflix Gift Card](https://veltrixdigi.com/gift-cards/netflix/): Give someone their next series and movie marathon.
+- [Google Play Gift Card](https://veltrixdigi.com/gift-cards/google/): €15 Google Play code for Austria-region accounts.
+- [Amazon Gift Card](https://veltrixdigi.com/gift-cards/amazon/): A versatile gift for an incredible range of products.
+- [Roblox Gift Card](https://veltrixdigi.com/gift-cards/roblox/): Official Roblox key; redeem credit to purchase Robux.
+- [Nintendo eShop](https://veltrixdigi.com/gift-cards/nintendo/): Discover games and extra content for Nintendo systems.
+- [Spotify Premium](https://veltrixdigi.com/products/spotify/): Explore premium music and podcast listening options.
+- [Google Gemini Subscription](https://veltrixdigi.com/products/gemini/): A 12-month Google AI Pro own-account activation option.
+- [Roblox Credit for Robux](https://veltrixdigi.com/products/robux/): Redeem this $10 gift card on Roblox, then use the credit to purchase Robux.
+- [World of Warcraft Game Time](https://veltrixdigi.com/products/wow-time/): A 60-day World of Warcraft time card for US WoW accounts.
+- [Fortnite Operation Brite Starter Pack](https://veltrixdigi.com/products/fortnite-items/): Operation Brite Starter Pack digital code.
+- [Xbox Game Pass Essential](https://veltrixdigi.com/products/xbox-essential/): One-month Xbox Game Pass Essential activation code for India-region Microsoft accounts.
+- [Call of Duty: Modern Warfare III](https://veltrixdigi.com/products/cod-mw3/): Modern Warfare III (2023) Cross-Gen Bundle digital key for Xbox One and Xbox Series X|S.
+- [Call of Duty: Black Ops 6](https://veltrixdigi.com/products/cod-bo6/): Xbox digital game key for the Black Ops 6 Cross-Gen Bundle.
+- [Call of Duty: Black Ops 7](https://veltrixdigi.com/products/cod-bo7/): Xbox activation code for Black Ops 7 Cross-Gen.
+- [Diablo IV](https://veltrixdigi.com/products/diablo4/): Diablo IV base-game activation code for Xbox.
+- [Counter-Strike 2 Prime Status Upgrade](https://veltrixdigi.com/products/cs2/): Counter-Strike 2 is free to play.
+- [Madden NFL 26](https://veltrixdigi.com/products/madden26/): Madden NFL 26 Standard Edition digital code for Xbox Series X|S.
+- [VALORANT Gift Card](https://veltrixdigi.com/gift-cards/valorant/): Redeem a €25 prepaid code on a compatible European VALORANT account.
+- [Fortnite Gift Card](https://veltrixdigi.com/gift-cards/fortnite/): €10 Fortnite gift card for a France-region Epic Games account.
+- [League of Legends Gift Card](https://veltrixdigi.com/gift-cards/league-of-legends/): Digital League of Legends code for European accounts.
+- [Apple Gift Card / iTunes](https://veltrixdigi.com/gift-cards/apple/): Explore Apple account and entertainment gift cards.
+- [Battle.net Gift Card](https://veltrixdigi.com/gift-cards/battle-net/): $20 Battle.net balance code for North American accounts.
+- [Twitch Gift Card](https://veltrixdigi.com/gift-cards/twitch/): $50 Twitch gift card for eligible US accounts.
+- [Discord Nitro Gift](https://veltrixdigi.com/gift-cards/discord-nitro/): One-month Discord Nitro gift link for an eligible account.
+- [EA Gift Card](https://veltrixdigi.com/gift-cards/ea/): EA Wallet gift codes for US accounts: $15, $20 or $25 credit.
+
+## Support and policies
+- [Delivery and activation](https://veltrixdigi.com/delivery.html)
+- [Refunds](https://veltrixdigi.com/refunds.html)
+- [Contact support](https://veltrixdigi.com/contact.html)
+- [About Veltrix](https://veltrixdigi.com/about.html)
+- [Terms](https://veltrixdigi.com/terms.html)
+- [Privacy](https://veltrixdigi.com/privacy.html)

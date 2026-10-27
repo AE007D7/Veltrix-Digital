@@ -32,12 +32,32 @@ async function stripeRequest(path, options = {}) {
   return { response, data };
 }
 
+let methodCache = null;
+let methodRequest = null;
+async function publicPaymentMethods() {
+  if (methodCache && methodCache.expires > Date.now()) return methodCache.methods;
+  if (methodRequest) return methodRequest;
+  methodRequest = (async () => {
+    try {
+      const { response, data } = await stripeRequest('/payment_method_configurations?limit=100', { signal: AbortSignal.timeout(4000) });
+      const config = Array.isArray(data.data) ? data.data.find(c => c.active === true && c.is_default === true && c.livemode === true) : null;
+      if (!response.ok || !config) return ['card'];
+      const methods = Object.entries(config).filter(([key, value]) => /^[a-z][a-z0-9_]{1,50}$/.test(key)
+        && value && typeof value === 'object' && value.available === true && value.display_preference?.value === 'on').map(([key]) => key);
+      methodCache = { methods, expires: Date.now() + 300000 };
+      return methods;
+    } catch (_) { return ['card']; }
+    finally { methodRequest = null; }
+  })();
+  return methodRequest;
+}
+
 module.exports = async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
 
   if (req.method === 'GET') {
     const sessionId = typeof req.query?.session_id === 'string' ? req.query.session_id : '';
-    if (!sessionId) return json(res, 200, { checkoutEnabled: liveCheckoutEnabled() });
+    if (!sessionId) { const enabled = liveCheckoutEnabled(); return json(res, 200, { checkoutEnabled: enabled, paymentMethods: enabled ? await publicPaymentMethods() : [] }); }
     if (!/^cs_(test|live)_[A-Za-z0-9]+$/.test(sessionId) || !liveCheckoutEnabled()) {
       return json(res, 400, { paymentStatus: 'unknown' });
     }

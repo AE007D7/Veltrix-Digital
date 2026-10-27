@@ -149,7 +149,6 @@
 .subscription-feature-card--spotify{--card-color:#1ee36b;--card-glow:#17ba6452;--card-start:#143d34;--card-end:#041a16}
 .subscription-feature-card--chatgpt{--card-color:#69e9c9;--card-glow:#12a88c65;--card-start:#194a50;--card-end:#071c27}
 .subscription-feature-card--gemini{--card-color:#c49bff;--card-glow:#7f75f275;--card-start:#2e2f74;--card-end:#101533}
-.subscription-feature-card--iptv{--card-color:#54dfff;--card-glow:#00bff265;--card-start:#10486a;--card-end:#061522}
 .sub-feature-top,.sub-feature-meta{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:3}
 .sub-feature-top{gap:14px}
 .sub-feature-category{font-size:10px;letter-spacing:.21em;font-weight:800;white-space:nowrap;color:#dfeeffc9}
@@ -165,7 +164,6 @@
 .subscription-feature-card--spotify .sub-feature-device{background:linear-gradient(135deg,#83fcb048,transparent 43%),linear-gradient(145deg,#119b4f,#064523)}
 .subscription-feature-card--chatgpt .sub-feature-device{background:linear-gradient(135deg,#a0fff537,transparent 46%),linear-gradient(150deg,#177966,#15323c)}
 .subscription-feature-card--gemini .sub-feature-device{background:linear-gradient(135deg,#ffffff32,transparent 50%),linear-gradient(150deg,#5248bb,#191d54)}
-.subscription-feature-card--iptv .sub-feature-device{background:linear-gradient(135deg,#9cf5ff4a,transparent 43%),linear-gradient(145deg,#157fa4,#07253f)}
 .sub-feature-spark{position:absolute;left:18%;top:23%;font-size:19px;color:#ecf9ffb5;text-shadow:0 0 14px var(--card-color);animation:subscriptionSpark 5s infinite}
 .sub-feature-meta{gap:15px;align-items:end}
 .sub-feature-meta strong{font:700 clamp(21px,2.05vw,28px)/1.22 var(--display);letter-spacing:-.055em;display:block}
@@ -181,19 +179,17 @@
 .art-spotify{background:radial-gradient(ellipse at 72% 22%,#34f89177,transparent 56%),linear-gradient(135deg,#0e6241,#061a16)}
 .art-chatgpt{background:radial-gradient(ellipse at 72% 22%,#68efd766,transparent 54%),linear-gradient(135deg,#15545a,#091b29)}
 .art-gemini{background:radial-gradient(ellipse at 72% 22%,#be8aff7a,transparent 55%),linear-gradient(135deg,#333777,#0e1437)}
-.art-iptv{background:radial-gradient(ellipse at 72% 22%,#57dcff70,transparent 57%),linear-gradient(135deg,#0b5471,#07192d)}
 .gift-card--spotify{background:linear-gradient(135deg,#23ad61,#06452b 83%)}
 .gift-card--chatgpt{background:linear-gradient(135deg,#238f89,#0e293e 83%)}
 .gift-card--gemini{background:radial-gradient(circle at 72% 15%,#9d76ff88,transparent 50%),linear-gradient(130deg,#4947a1,#101e4b 85%)}
-.gift-card--iptv{background:radial-gradient(circle at 75% 18%,#00d4ff60,transparent 50%),linear-gradient(135deg,#107398,#061e35 85%)}
-.gift-card--spotify .brand-mark,.gift-card--chatgpt .brand-mark,.gift-card--gemini .brand-mark,.gift-card--iptv .brand-mark{width:59px;height:59px}
-.gift-card--spotify .gift-card-small,.gift-card--chatgpt .gift-card-small,.gift-card--gemini .gift-card-small,.gift-card--iptv .gift-card-small{font-size:6px;letter-spacing:.15em}
+.gift-card--spotify .brand-mark,.gift-card--chatgpt .brand-mark,.gift-card--gemini .brand-mark{width:59px;height:59px}
+.gift-card--spotify .gift-card-small,.gift-card--chatgpt .gift-card-small,.gift-card--gemini .gift-card-small{font-size:6px;letter-spacing:.15em}
 @media (max-width:1000px){.subscription-section{padding:90px 0 80px}.subscription-feature-grid{gap:14px}.subscription-feature-card{min-height:390px;padding:20px}.sub-feature-visual{min-height:250px}.sub-feature-device{width:144px;height:155px;border-radius:28px}.sub-feature-device img{width:82px;height:82px}.sub-feature-orbit{width:210px;height:210px}.sub-feature-orbit--two{width:155px;height:155px}.sub-feature-category{font-size:9px;letter-spacing:.1em}.sub-feature-meta strong{font-size:21px}}
 @media (max-width:710px){.subscription-section{padding:78px 0 67px}.subscription-head{text-align:left;margin-bottom:34px}.subscription-head .section-kicker{justify-content:flex-start}.subscription-head h2{font-size:clamp(41px,9vw,62px)}.subscription-head p{font-size:14px}.subscription-feature-grid{grid-template-columns:minmax(0,1fr);gap:19px}.subscription-feature-card{min-height:360px;padding:22px 24px}.sub-feature-visual{min-height:230px}.sub-feature-device{width:147px;height:157px}.sub-feature-meta strong{font-size:24px}.subscription-footer{flex-direction:column;align-items:flex-start}.subscription-backdrop span:nth-child(2){right:-520px}}
 @media (max-width:390px){.subscription-head h2{font-size:40px}.sub-feature-category{font-size:8px}.subscription-feature-card{min-height:355px}}
 @media (prefers-reduced-motion:reduce){.subscription-feature-card{opacity:1;filter:none;transform:none!important;will-change:auto}.sub-feature-device,.sub-feature-light{transform:none!important}.sub-feature-spark{animation:none!important}}
 
-/* V4: license-compliant IPTV spotlight and responsive four-card layout. */
+
 @media (min-width:711px) and (max-width:1190px){.subscription-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.subscription-feature-card{min-height:390px}.sub-feature-visual{min-height:230px}}
 
 /* ============================================================
@@ -528,3 +524,5 @@ body, .container, .drawer, .request-dialog, .product-modal{overflow-wrap:break-w
 .gift-card--battlenet,.gift-card--twitch,.gift-card--discord{background:linear-gradient(145deg,#264c93,#10203e)}
 @media(max-width:600px){.discovery-card,.discovery-rail--topups .discovery-card-featured{flex-basis:min(78vw,290px)!important;width:min(78vw,290px)!important;min-height:380px}.discovery-card .discovery-art{height:170px!important;flex-basis:170px!important}.discovery-card-link{min-height:48px}.product-view{width:100%;min-height:48px}}
 @media(prefers-reduced-motion:reduce){.discovery-card,.discovery-card-link,.product-view{transition:none!important}}
+
+.subscription-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:450px){.subscription-feature-grid{grid-template-columns:1fr}}

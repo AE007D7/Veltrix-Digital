@@ -296,7 +296,7 @@
     }
   },
   "robux": {
-    "name": "Roblox Robux Top-Up",
+    "name": "Roblox Credit for Robux",
     "variants": {
       "usd10": {
         "label": "$10 Roblox credit for Robux · digital code",
@@ -340,7 +340,7 @@
     }
   },
   "wow-mists": {
-    "name": "WoW: Mists of Pandaria Classic",
+    "name": "WoW Mists of Pandaria Classic Game Time",
     "variants": {
       "us60": {
         "label": "60-day WoW game-time code · US account",
@@ -351,7 +351,7 @@
     }
   },
   "wow-classic": {
-    "name": "WoW Classic Era",
+    "name": "WoW Classic Era Game Time",
     "variants": {
       "us60": {
         "label": "60-day WoW game-time code · US account",
@@ -362,7 +362,7 @@
     }
   },
   "fortnite-items": {
-    "name": "Fortnite Items & Packs",
+    "name": "Fortnite Operation Brite Starter Pack",
     "variants": {
       "britecanada": {
         "label": "Operation Brite Starter Pack · Xbox code",
@@ -384,7 +384,7 @@
     }
   },
   "xbox-live": {
-    "name": "Xbox Live / Online Gaming",
+    "name": "Xbox Online Play — Game Pass Essential",
     "variants": {
       "india1": {
         "label": "Online play via Game Pass Essential · 1 month",
@@ -439,7 +439,7 @@
     }
   },
   "cs2": {
-    "name": "Counter-Strike 2",
+    "name": "Counter-Strike 2 Prime Status Upgrade",
     "variants": {
       "primecis": {
         "label": "Prime Status Upgrade · Steam gift",
@@ -461,7 +461,7 @@
     }
   },
   "fortnite-game": {
-    "name": "Fortnite",
+    "name": "Fortnite Operation Brite Starter Pack",
     "variants": {
       "britecanada": {
         "label": "Operation Brite Starter Pack · Xbox code",
@@ -563,6 +563,29 @@
         "amount": 1600,
         "region": "Eligible Discord account regions",
         "note": "One-month Discord Nitro gift link for an eligible account. This is Nitro, not Nitro Basic. No login or password is requested. One-time payment; no automatic renewal."
+      }
+    }
+  },
+  "ea-gift-card": {
+    "name": "EA Gift Card",
+    "variants": {
+      "usd15": {
+        "label": "$15 EA Wallet · digital code",
+        "amount": 1900,
+        "region": "United States",
+        "note": "Digital EA Wallet code for United States accounts using USD. The selected dollar amount is wallet credit; the selling price is charged in USD. Redeem through EA's official app or website. Check account-country and currency compatibility before buying."
+      },
+      "usd20": {
+        "label": "$20 EA Wallet · digital code",
+        "amount": 2600,
+        "region": "United States",
+        "note": "Digital EA Wallet code for United States accounts using USD. The selected dollar amount is wallet credit; the selling price is charged in USD. Redeem through EA's official app or website. Check account-country and currency compatibility before buying."
+      },
+      "usd25": {
+        "label": "$25 EA Wallet · digital code",
+        "amount": 3200,
+        "region": "United States",
+        "note": "Digital EA Wallet code for United States accounts using USD. The selected dollar amount is wallet credit; the selling price is charged in USD. Redeem through EA's official app or website. Check account-country and currency compatibility before buying."
       }
     }
   }
