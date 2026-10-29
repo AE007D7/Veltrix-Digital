@@ -588,5 +588,98 @@
         "note": "Digital EA Wallet code for United States accounts using USD. The selected dollar amount is wallet credit; the selling price is charged in USD. Redeem through EA's official app or website. Check account-country and currency compatibility before buying."
       }
     }
+  },
+  "razer-gold": {
+    "name": "Razer Gold Gift Card",
+    "variants": {
+      "usd5": {
+        "label": "$5 Razer Gold · digital code",
+        "amount": 549,
+        "region": "Global · USD Razer Gold wallets",
+        "note": "Digital USD Razer Gold PIN. Redeem on a compatible USD Razer Gold wallet; the wallet currency must match. Regional merchant restrictions apply."
+      },
+      "usd10": {
+        "label": "$10 Razer Gold · digital code",
+        "amount": 1049,
+        "region": "Global · USD Razer Gold wallets",
+        "note": "Digital USD Razer Gold PIN. Redeem on a compatible USD Razer Gold wallet; the wallet currency must match. Regional merchant restrictions apply."
+      },
+      "usd20": {
+        "label": "$20 Razer Gold · digital code",
+        "amount": 2049,
+        "region": "Global · USD Razer Gold wallets",
+        "note": "Digital USD Razer Gold PIN. Redeem on a compatible USD Razer Gold wallet; the wallet currency must match. Regional merchant restrictions apply."
+      },
+      "usd50": {
+        "label": "$50 Razer Gold · digital code",
+        "amount": 5099,
+        "region": "Global · USD Razer Gold wallets",
+        "note": "Digital USD Razer Gold PIN. Redeem on a compatible USD Razer Gold wallet; the wallet currency must match. Regional merchant restrictions apply."
+      }
+    }
+  },
+  "pubg-mobile": {
+    "name": "PUBG Mobile UC",
+    "variants": {
+      "uc60": {
+        "label": "60 UC · digital code",
+        "amount": 149,
+        "region": "Global · supported PUBG Mobile servers",
+        "note": "PUBG Mobile UC redemption code for supported global servers. Redeem through Midasbuy using your player ID. Not for China, Japan, Korea, Taiwan, Vietnam or BGMI/India. No account password is needed."
+      },
+      "uc325": {
+        "label": "300 + 25 UC · digital code",
+        "amount": 549,
+        "region": "Global · supported PUBG Mobile servers",
+        "note": "PUBG Mobile UC redemption code for supported global servers. Redeem through Midasbuy using your player ID. Not for China, Japan, Korea, Taiwan, Vietnam or BGMI/India. No account password is needed."
+      },
+      "uc660": {
+        "label": "600 + 60 UC · digital code",
+        "amount": 1049,
+        "region": "Global · supported PUBG Mobile servers",
+        "note": "PUBG Mobile UC redemption code for supported global servers. Redeem through Midasbuy using your player ID. Not for China, Japan, Korea, Taiwan, Vietnam or BGMI/India. No account password is needed."
+      },
+      "uc1800": {
+        "label": "1,500 + 300 UC · digital code",
+        "amount": 2549,
+        "region": "Global · supported PUBG Mobile servers",
+        "note": "PUBG Mobile UC redemption code for supported global servers. Redeem through Midasbuy using your player ID. Not for China, Japan, Korea, Taiwan, Vietnam or BGMI/India. No account password is needed."
+      }
+    }
+  },
+  "free-fire": {
+    "name": "Free Fire Diamonds",
+    "variants": {
+      "diamonds100": {
+        "label": "100 Diamonds · digital code",
+        "amount": 149,
+        "region": "Global · compatible Free Fire accounts",
+        "note": "Digital Garena Free Fire Diamond redemption code for compatible global accounts. Redeem using the official Garena redemption instructions supplied with the code. Country and server restrictions apply. No password is needed."
+      },
+      "diamonds210": {
+        "label": "210 Diamonds · digital code",
+        "amount": 249,
+        "region": "Global · compatible Free Fire accounts",
+        "note": "Digital Garena Free Fire Diamond redemption code for compatible global accounts. Redeem using the official Garena redemption instructions supplied with the code. Country and server restrictions apply. No password is needed."
+      },
+      "diamonds530": {
+        "label": "530 Diamonds · digital code",
+        "amount": 549,
+        "region": "Global · compatible Free Fire accounts",
+        "note": "Digital Garena Free Fire Diamond redemption code for compatible global accounts. Redeem using the official Garena redemption instructions supplied with the code. Country and server restrictions apply. No password is needed."
+      },
+      "diamonds1080": {
+        "label": "1,080 Diamonds · digital code",
+        "amount": 1049,
+        "region": "Global · compatible Free Fire accounts",
+        "note": "Digital Garena Free Fire Diamond redemption code for compatible global accounts. Redeem using the official Garena redemption instructions supplied with the code. Country and server restrictions apply. No password is needed."
+      },
+      "diamonds2200": {
+        "label": "2,200 Diamonds · digital code",
+        "amount": 2099,
+        "region": "Global · compatible Free Fire accounts",
+        "note": "Digital Garena Free Fire Diamond redemption code for compatible global accounts. Redeem using the official Garena redemption instructions supplied with the code. Country and server restrictions apply. No password is needed."
+      }
+    }
   }
 }
