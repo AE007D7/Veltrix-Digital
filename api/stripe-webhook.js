@@ -59,3 +59,6 @@ module.exports = async function handler(req, res) {
   });
   return res.status(200).json({ received: true });
 };
+
+// Preserve exact raw bytes for Stripe signature verification.
+module.exports.config = { api: { bodyParser: false } };
